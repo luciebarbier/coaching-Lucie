@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Coaching Lucie</h1>
+
+    <blockquote>
+        <p>
+        <% if @question.blank? %>
+            I can't hear you !
+        <% else %>
+            <%= @question  %>     
+        <% end %>
+        </p>
+        <cite>You</cite>
+    </blockquote>
+
+    <blockquote>
+        <p><%= @answer %></p>
+        <cite> The coach</cite>
+    </blockquote>
+
+    <%= link_to "Ask a new question", ask_path %>
+</div>
